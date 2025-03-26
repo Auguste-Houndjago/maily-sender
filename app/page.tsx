@@ -45,8 +45,7 @@ export default function Home() {
             <h1 className="text-2xl md:text-4xl font-bold">Abonne-toi {email}</h1>
 
             <p className="my-4 text-sm">
-              Recevez des astuces exclusives pour améliorer vos compétences en programmation,
-              directement dans votre boîte mail, tous les jours.
+              Recevez des Notification en ligne des activiter de votre Organisation
             </p>
 
             <form onSubmit={handleSubmit} className="flex items-center w-full">
