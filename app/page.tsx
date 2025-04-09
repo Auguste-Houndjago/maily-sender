@@ -1,6 +1,8 @@
 "use client";
 
 
+import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
+import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -36,13 +38,16 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen" data-theme="dracula">
+<div
+  className="flex flex-col justify-center items-center h-screen "
+  data-theme="dracula"
+>
       <ToastContainer position="top-center" autoClose={3000} hideProgressBar closeOnClick pauseOnHover draggable />
 
       <div className="flex items-center mb-6">
         <div className="flex flex-col items-center">
 
-          <div className="h-52 aspect-square bg-[url('/attendancy.jpeg')] bg-cover bg-center rounded-3xl">
+          <div className="h-52 aspect-square bg-[url('/attendancy.jpeg')] z-50 bg-cover bg-center rounded-3xl">
 
           </div>
 
@@ -70,7 +75,18 @@ export default function Home() {
             <p className="text-xs text-center mt-2">Sécurisé par Attendancy</p>
           </div>
         </div>
+
       </div>
+      <AnimatedGridPattern
+        numSquares={30}
+        maxOpacity={0.1}
+        duration={3}
+        repeatDelay={1}
+        className={cn(
+          "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
+        )}
+      />
     </div>
   );
 }
