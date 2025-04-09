@@ -5,6 +5,7 @@ export default {
         colors: {
           // primary: "#FF0000", // rouge
         },
+        
       },
     },
     plugins: [],

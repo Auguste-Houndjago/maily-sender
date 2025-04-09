@@ -1,4 +1,6 @@
 "use client";
+
+
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -39,10 +41,13 @@ export default function Home() {
 
       <div className="flex items-center mb-6">
         <div className="flex flex-col items-center">
-          <div className="h-72 min-w-96 bg-[url('/attendancy.jpeg')] bg-cover bg-center rounded-3xl"></div>
+
+          <div className="h-52 aspect-square bg-[url('/attendancy.jpeg')] bg-cover bg-center rounded-3xl">
+
+          </div>
 
           <div className="w-full p-10 pt-0">
-            <h1 className="text-2xl md:text-4xl font-bold">Abonne-toi {email}</h1>
+            <h1 className="text-2xl md:text-2xl text-center font-bold">Abonne-toi {email}</h1>
 
             <p className="my-4 text-sm">
               Recevez des Notification en ligne des activiter de votre Organisation
@@ -57,7 +62,7 @@ export default function Home() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <button className="btn ml-2 btn-primary" title="S'abonner" type="submit" disabled={isLoading}>
+              <button className="btn ml-2 text-base text-center btn-info" title="S'abonner" type="submit" disabled={isLoading}>
                 {isLoading ? "En cours..." : "S'abonner"}
               </button>
             </form>
